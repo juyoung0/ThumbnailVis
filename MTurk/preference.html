@@ -1,0 +1,331 @@
+<!-- You must include this JavaScript file -->
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<div class="container">
+<crowd-form answer-format="flatten-objects">
+    <div class="container" id="introduction">
+        <h2>
+            <strong>Instructions </strong><br>
+            Preference Task...
+            Don't click 'Submit' button. Click 'Start Task!'
+        </h2>
+        <button type="button" class="btn btn-info" id="start">Start Task!</button><br>
+    </div>
+
+    <crowd-input id="task1-1" name="task1-1" style="display:none;" placeholder="example" required></crowd-input>
+    <crowd-input id="task1-2" name="task1-2" style="display:none;" placeholder="example" required></crowd-input>
+    <crowd-input id="task1-3" name="task1-3" style="display:none;" placeholder="example" required></crowd-input>
+
+    <crowd-input id="task2-1" name="task2-1" style="display:none;" placeholder="example" required></crowd-input>
+    <crowd-input id="task2-2" name="task2-2" style="display:none;" placeholder="example" required></crowd-input>
+    <crowd-input id="task2-3" name="task2-3" style="display:none;" placeholder="example" required></crowd-input>
+
+    <crowd-input id="task3-1" name="task3-1" style="display:none;" placeholder="example" required></crowd-input>
+    <crowd-input id="task3-2" name="task3-2" style="display:none;" placeholder="example" required></crowd-input>
+    <crowd-input id="task3-3" name="task3-3" style="display:none;" placeholder="example" required></crowd-input>
+
+    <crowd-input id="task4-1" name="task4-1" style="display:none;" placeholder="example" required></crowd-input>
+    <crowd-input id="task4-2" name="task4-2" style="display:none;" placeholder="example" required></crowd-input>
+    <crowd-input id="task4-3" name="task4-3" style="display:none;" placeholder="example" required></crowd-input>
+
+    <crowd-input id="task5-1" name="task5-1" style="display:none;" placeholder="example" required></crowd-input>
+    <crowd-input id="task5-2" name="task5-2" style="display:none;" placeholder="example" required></crowd-input>
+    <crowd-input id="task5-3" name="task5-3" style="display:none;" placeholder="example" required></crowd-input>
+
+
+    <div class="container" id="ranking-button" style="display:none;">
+        <p>Top 1 : </p>
+        <div id="button-1" class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary button1">1</button>
+            <button type="button" class="btn btn-secondary button1">2</button>
+            <button type="button" class="btn btn-secondary button1">3</button>
+            <button type="button" class="btn btn-secondary button1">4</button>
+            <button type="button" class="btn btn-secondary button1">5</button>
+            <button type="button" class="btn btn-secondary button1">6</button>
+            <button type="button" class="btn btn-secondary button1">7</button>
+            <button type="button" class="btn btn-secondary button1">8</button>
+            <button type="button" class="btn btn-secondary button1">9</button>
+            <button type="button" class="btn btn-secondary button1">10</button>
+        </div><br>
+        <p>Top 2 : </p>
+        <div id="button-2" class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary button2">1</button>
+            <button type="button" class="btn btn-secondary button2">2</button>
+            <button type="button" class="btn btn-secondary button2">3</button>
+            <button type="button" class="btn btn-secondary button2">4</button>
+            <button type="button" class="btn btn-secondary button2">5</button>
+            <button type="button" class="btn btn-secondary button2">6</button>
+            <button type="button" class="btn btn-secondary button2">7</button>
+            <button type="button" class="btn btn-secondary button2">8</button>
+            <button type="button" class="btn btn-secondary button2">9</button>
+            <button type="button" class="btn btn-secondary button2">10</button>
+        </div><br>
+        <p>Top 3 : </p>
+        <div id="button-3" class="btn-group" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary button3">1</button>
+            <button type="button" class="btn btn-secondary button3">2</button>
+            <button type="button" class="btn btn-secondary button3">3</button>
+            <button type="button" class="btn btn-secondary button3">4</button>
+            <button type="button" class="btn btn-secondary button3">5</button>
+            <button type="button" class="btn btn-secondary button3">6</button>
+            <button type="button" class="btn btn-secondary button3">7</button>
+            <button type="button" class="btn btn-secondary button3">8</button>
+            <button type="button" class="btn btn-secondary button3">9</button>
+            <button type="button" class="btn btn-secondary button3">10</button>
+        </div><br><hr>
+    </div>
+
+
+    <div class="container" id="task1" style="display:none;">
+        <h2>Task 1 : Key Point</h2>
+        <h4>Explanation</h4>
+        <!-- Your image file URLs will be substituted for the ${image_url} variable in the src attribute
+               below when you publish a batch with a CSV input file containing multiple image file URLs -->
+
+        <div class="row">
+            <div class="column">
+                <ul>
+                    <li class="list-group-item"> <p>1</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>3</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>5</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>6</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>9</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul>
+                    <li class="list-group-item"> <p>2</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>4</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>5</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>6</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>10</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                </ul>
+            </div>
+        </div>
+        <button type="button" class="btn btn-info" id="goto2">Next Task!</button><br>
+    </div>
+
+    <div class="container" id="task2" style="display:none;">
+        <h2>Task 2 : Summary </h2>
+        <h4>Explanation</h4>
+        <!-- Your image file URLs will be substituted for the ${image_url} variable in the src attribute
+               below when you publish a batch with a CSV input file containing multiple image file URLs -->
+        <div class="row">
+            <div class="column">
+                <ul>
+                    <li class="list-group-item"> <p>1</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>3</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>5</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>6</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>9</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul>
+                    <li class="list-group-item"> <p>2</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>4</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>5</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>6</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>10</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                </ul>
+            </div>
+        </div>
+        <button type="button" class="btn btn-info" id="goto3">Next Task!</button><br>
+    </div>
+
+    <div class="container" id="task3" style="display:none;">
+        <h2>Task 3 : Draw Attenstions </h2>
+        <h4>Explanation</h4>
+        <!-- Your image file URLs will be substituted for the ${image_url} variable in the src attribute
+               below when you publish a batch with a CSV input file containing multiple image file URLs -->
+
+        <div class="row">
+            <div class="column">
+                <ul>
+                    <li class="list-group-item"> <p>1</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>3</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>5</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>6</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>9</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul>
+                    <li class="list-group-item"> <p>2</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>4</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>5</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>6</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>10</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                </ul>
+            </div>
+        </div>
+        <button type="button" class="btn btn-info" id="goto4">Next Task!</button><br>
+    </div>
+
+    <div class="container" id="task4" style="display:none;">
+        <h2>Task 4 : Attractive </h2>
+        <h4>Explanation</h4>
+        <!-- Your image file URLs will be substituted for the ${image_url} variable in the src attribute
+               below when you publish a batch with a CSV input file containing multiple image file URLs -->
+
+        <div class="row">
+            <div class="column">
+                <ul>
+                    <li class="list-group-item"> <p>1</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>3</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>5</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>6</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>9</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul>
+                    <li class="list-group-item"> <p>2</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>4</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>5</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>6</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>10</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                </ul>
+            </div>
+        </div>
+        <button type="button" class="btn btn-info" id="goto5">Next Task!</button><br>
+    </div>
+
+    <div class="container" id="task5" style="display:none;">
+        <h2>Task 5 : Overall</h2>
+        <h4>Explanation</h4>
+        <!-- Your image file URLs will be substituted for the ${image_url} variable in the src attribute
+               below when you publish a batch with a CSV input file containing multiple image file URLs -->
+
+        <div class="row">
+            <div class="column">
+                <ul>
+                    <li class="list-group-item"> <p>1</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>3</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>5</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>6</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>9</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul>
+                    <li class="list-group-item"> <p>2</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>4</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>5</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>6</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                    <li class="list-group-item"> <p>10</p><img src="https://assets.pernod-ricard.com/nz/media_images/test.jpg?hUV74FvXQrWUBk1P2.fBvzoBUmjZ1wct" style="max-width: 100%; max-height: 250px" /></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</crowd-form>
+</div>
+
+<style>
+    .column {
+        flex: 50%;
+        padding: 0 4px;
+    }
+    .column img {
+        margin-top: 8px;
+        vertical-align: middle;
+    }
+
+</style>
+
+<script>
+  var first = 0;
+  var second = 0;
+  var third = 0;
+  var final = false;
+
+  function topFunction() {
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+  }
+
+  $("#start" ).click(function() {
+    $('crowd-button').css("display", "none");
+    var page1 = $('#introduction');
+    page1.css("display", "none");
+    var page2 = $('#task1');
+    $('#ranking-button').css("display", "block");
+    page2.css("display", "block");
+  });
+
+  $('#button-1 button').click(function() {
+    $(this).addClass('active').siblings().removeClass('active');
+    first = $(this).text();
+    if(final)
+      $('#task5-1').val(first);
+  });
+
+  $('#button-2 button').click(function() {
+    $(this).addClass('active').siblings().removeClass('active');
+    second = $(this).text();
+    if(final)
+      $('#task5-2').val(second);
+  });
+
+  $('#button-3 button').click(function() {
+    $(this).addClass('active').siblings().removeClass('active');
+    third = $(this).text();
+    if(final)
+      $('#task5-3').val(third);
+  });
+
+  $("#goto2" ).click(function() {
+    var page1 = $('#task1');
+    page1.css("display", "none");
+    var page2 = $('#task2');
+    page2.css("display", "block");
+    $('#task1-1').val(first);
+    $('#task1-2').val(second);
+    $('#task1-3').val(third);
+    $('button').removeClass('active');
+    topFunction();
+  });
+
+  $("#goto3" ).click(function() {
+    var page1 = $('#task2');
+    page1.css("display", "none");
+    var page2 = $('#task3');
+    page2.css("display", "block");
+    $('#task2-1').val(first);
+    $('#task2-2').val(second);
+    $('#task2-3').val(third);
+    $('button').removeClass('active');
+    topFunction();
+  });
+
+  $("#goto4" ).click(function() {
+    var page1 = $('#task3');
+    page1.css("display", "none");
+    var page2 = $('#task4');
+    page2.css("display", "block");
+    $('#task3-1').val(first);
+    $('#task3-2').val(second);
+    $('#task3-3').val(third);
+    $('button').removeClass('active');
+    topFunction();
+  });
+
+  $("#goto5" ).click(function() {
+    var page1 = $('#task4');
+    page1.css("display", "none");
+    var page2 = $('#task5');
+    page2.css("display", "block");
+    $('#task4-1').val(first);
+    $('#task4-2').val(second);
+    $('#task4-3').val(third);
+    $('button').removeClass('active');
+    final = true;
+    $('crowd-button').css("display", "block");
+    topFunction();
+  });
+</script>

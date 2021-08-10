@@ -1,0 +1,166 @@
+<!-- You must include this JavaScript file -->
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+
+<div class="container">
+<crowd-form answer-format="flatten-objects">
+    <div class="container" id="introduction">
+        <h2>
+            <strong>Instructions </strong><br>
+            Evaluation Task...
+            Don't click 'Submit' button. Click 'Start Task!'
+        </h2>
+        <button type="button" class="btn btn-info" id="start">Start Task!</button><br>
+    </div>
+
+    <div class="container" id="task1" style="display:none;">
+        <h2>Task 1</h2>
+        <h4>Explanation</h4>
+        <!-- Your image file URLs will be substituted for the ${image_url} variable in the src attribute
+               below when you publish a batch with a CSV input file containing multiple image file URLs -->
+        <p><img src="https://koreacentral1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=fFNQTw&docid=https%3A%2F%2Funistackr0-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!DVvOifCKCkSbwZ0aP--AuiYi_Q2YuWBArrk6571FTdtEJIB8WVMrQ6yCitxDkh1S%2Fitems%2F01JSMUI3T76YKDNUX2WBCYY5Z4M6LLTEII%3Fversion%3DPublished&encodeFailures=1&ctag=%22c%3A%7B3614F67F-FAD2-45B0-8C77-3C6796B99108%7D%2C1%22&width=2560&height=1209&srcWidth=&srcHeight=" style="max-width: 100%; max-height: 250px" /></p>
+
+        <div>
+            <p>On a scale of 1-7, Key Point?</p>
+            <crowd-slider name="pre-keypoint" min="1" max="7" step="1" pin="true" required></crowd-slider>
+        </div>
+        <div>
+            <p>On a scale of 1-7, Summary?</p>
+            <crowd-slider name="pre-summary" min="1" max="7" step="1" pin="true" required></crowd-slider>
+        </div>
+        <div>
+            <p>On a scale of 1-7, Draw Attentions?</p>
+            <crowd-slider name="pre-attention" min="1" max="7" step="1" pin="true" required></crowd-slider>
+        </div>
+        <div>
+            <p>On a scale of 1-7, Attractive?</p>
+            <crowd-slider name="pre-attractive" min="1" max="7" step="1" pin="true" required></crowd-slider>
+        </div>
+        <div>
+            <p>On a scale of 1-7, Overall?</p>
+            <crowd-slider name="pre-attractive" min="1" max="7" step="1" pin="true" required></crowd-slider>
+        </div>
+        <button type="button" class="btn btn-info" id="goto-article">Next Task!</button><br>
+    </div>
+
+    <div class="container" id="task-article" style="display:none;">
+        <h2>Article</h2>
+        <h4>You should read article in 2 min</h4>
+        <!-- Your image file URLs will be substituted for the ${image_url} variable in the src attribute
+               below when you publish a batch with a CSV input file containing multiple image file URLs -->
+        <button type="button" class="btn btn-info" id="show-article">Show Article!</button><br>
+        <B><span id="timeLeft"></span></B><br>
+        <div id="article-1" style="display:none;">
+            <p><img src="https://lh6.googleusercontent.com/iYsx3L61gKU0G8vKanOwkm921-WhswjUYPBWFAOy6ahjIWd5kgFCU-K8N3JvqaEP1ZVF30fw8ZbbsF-NOQtlszv9D2924DO_RLNCjdnaOb9jYEH6MSVb5tmVaBqw6YIIv9-4mEXhPbaduUTTmA" style="max-width: 100%; max-height: 250px" /></p>
+            <p>Public trust in the government remains near historic lows. Only 18% of Americans today say they can trust the government in Washington to do what is right “just about always” (3%) or “most of the time” (15%).</p>
+            <p>When the National Election Study began asking about trust in government in 1958, about three-quarters of Americans trusted the federal government to do the right thing almost always or most of the time. Trust in government began eroding during the 1960s, amid the escalation of the Vietnam War, and the decline continued in the 1970s with the Watergate scandal and worsening economic struggles. Confidence in government recovered in the mid-1980s before falling again in the mid-1990s. But as the economy grew in the late 1990s so too did confidence in government. Public trust reached a three-decade high shortly after the 9/11 terrorist attacks, but declined quickly thereafter. Since 2007, the share saying they can trust the government always or most of the time has not surpassed 30%.</p>
+            <p>Currently, 22% of Republicans and Republican-leaning independents say they can trust government, compared with 15% of Democrats and Democratic leaners. Throughout Obama’s tenure, more Democrats than Republicans reported trusting the government, though that has flipped since Trump’s election. Since the 1970s, trust in government has been consistently higher among members of the party that controls the White House than among the opposition party. However, Republicans have been much more reactive than Democrats to changes in political power. Republicans have expressed much higher levels of trust during Republican than during Democratic presidencies, while Democrats’ attitudes have tended to be more consistent, regardless of which party controls the White House.</p>
+        </div>
+        <div id="article-2" style="display:none;">
+            <p><img src="https://lh6.googleusercontent.com/MgpiYnpt4uoh7kdBlF3lnMMHRYaGyHpZ2ojhUSiJKomlVyeskbqIHik0KgsazQm7zxjMbPUTwxxZr8Ku5cw4F-ORkH0mxxc5TmtbF3VvVayiWBJLJYV0NfQ0Bx8lXXDX0o2_AZ901cFkphHaug" style="max-width: 100%; max-height: 250px" /></p>
+            Stocks have had a bad month. Apple has had a worse one.
+            Shares of the iPhone maker were trading lower on Tuesday afternoon after comments Monday from President Trump suggesting that tariffs could be placed on the company’s devices imported from China.
+            Over the last month, Apple’s stock has fallen 20 percent, putting it on pace for its worst month since the financial crisis.
+            The tumble has shaved roughly $230 billion off Apple’s market value, placing it close to losing its position as the most valuable publicly traded company to Microsoft.
+            The two companies have competed since the mid-1970s, when both were founded. Microsoft dominated its rival in the 1990s, riding the popularity of its Windows operating system to become the largest publicly traded company by the end of the decade. During that time, Apple flirted with going broke.
+            But that dynamic reversed. Microsoft’s shares and its market value stagnated for more than a decade after the dot-com bust. Powered by the release of products like the iPod and later the iPhone, Apple’s shares marched higher.
+            By 2010, Apple’s market value had passed Microsoft’s, and the gap between the two continued to grow, reaching as much as $400 billion in 2015. As recently as a month ago, Apple was worth around $250 billion more than Microsoft.
+            In recent weeks, investors have grown increasingly concerned about iPhone sales. A number of Apple suppliers cut their financial outlooks for this quarter, suggesting there may be weaker demand for the latest models of the phone than expected. Last quarter, sales of iPhones accounted for nearly 60 percent of Apple’s revenue.
+            Microsoft has fared much better during November’s stock market rout. Late last month, Microsoft reported better-than-expected earnings driven by continued fast growth in its commercial cloud computing business. Its shares are up about 1 percent this month.
+        </div>
+        <button type="button" class="btn btn-info" id="goto2" style="display:none;">Next Task!</button><br>
+    </div>
+
+
+    <div class="container" id="task2" style="display:none;">
+        <h2>Task 2</h2>
+        <h4>Explanation</h4>
+        <!-- The crowd-classifier element will create a tool for the Worker to select the
+           correct answer to your question.
+
+           Your image file URLs will be substituted for the ${image_url} variable in the
+           src attribute below when you publish a batch with a CSV input file containing
+           multiple image file URLs -->
+
+        <p><img src="https://koreacentral1-mediap.svc.ms/transform/thumbnail?provider=spo&inputFormat=png&cs=fFNQTw&docid=https%3A%2F%2Funistackr0-my.sharepoint.com%3A443%2F_api%2Fv2.0%2Fdrives%2Fb!DVvOifCKCkSbwZ0aP--AuiYi_Q2YuWBArrk6571FTdtEJIB8WVMrQ6yCitxDkh1S%2Fitems%2F01JSMUI3QD7IYVBO4WXRFJPTDD4QDVQNON%3Fversion%3DPublished&encodeFailures=1&ctag=%22c%3A%7B5031FA03-96BB-4ABC-97CC-63E4075835CD%7D%2C1%22&width=2560&height=1209&srcWidth=&srcHeight=" style="max-width: 100%; max-height: 250px" /></p>
+
+        <div>
+            <p>On a scale of 1-7, Key Point?</p>
+            <crowd-slider name="keypoint" min="1" max="7" step="1" pin="true" required></crowd-slider>
+        </div>
+        <div>
+            <p>On a scale of 1-7, Summary?</p>
+            <crowd-slider name="summary" min="1" max="7" step="1" pin="true" required></crowd-slider>
+        </div>
+        <div>
+            <p>On a scale of 1-7, Draw Attentions?</p>
+            <crowd-slider name="attention" min="1" max="7" step="1" pin="true" required></crowd-slider>
+        </div>
+        <div>
+            <p>On a scale of 1-7, Attractive?</p>
+            <crowd-slider name="attractive" min="1" max="7" step="1" pin="true" required></crowd-slider>
+        </div>
+        <div>
+            <p>On a scale of 1-7, Overall?</p>
+            <crowd-slider name="attractive" min="1" max="7" step="1" pin="true" required></crowd-slider>
+        </div>
+    </div>
+</crowd-form>
+</div>
+<script>
+  var delay=10; //시간설정
+  var clock=delay;
+
+  function show_article(){
+    $('#show-article').css("display", "none");
+    $('#article-1').css("display", "block");
+    var timer = setInterval(function() {
+      clock--;
+      $('#timeLeft').html("Time Left : " + clock);
+      if(clock==0) {
+        clearInterval(timer);
+        hide_article();
+      }
+    }, 1000);
+  }
+
+  function hide_article(){
+    $('#article-1').css("display", "none");
+    $('#timeLeft').html("Time is done");
+    $("#goto2").css("display", "block");
+    //clock=delay;
+  }
+
+  $("#start" ).click(function() {
+    $('crowd-button').css("display", "none");
+    var page1 = $('#introduction');
+    page1.css("display", "none");
+    var page2 = $('#task1');
+    $('#ranking-button').css("display", "block");
+    page2.css("display", "block");
+  });
+
+  $("#show-article" ).click(function() {
+    show_article();
+  });
+
+  $("#goto-article" ).click(function() {
+    var article1 = $('#task1');
+    article1.css("display", "none");
+    var article2 = $('#task-article');
+    article2.css("display", "block");
+  });
+
+  $("#goto2" ).click(function() {
+    var page1 = $('#task-article');
+    page1.css("display", "none");
+    var page2 = $('#task2');
+    page2.css("display", "block");
+    $('crowd-button').css("display", "block");
+    topFunction();
+  });
+
+</script>
