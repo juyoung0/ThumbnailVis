@@ -10,8 +10,6 @@
 * 개발 인원 : 단독 개발
 * 사용 스택 : html, React.js
 
-### 데모 영상 ###
-
 ### 실행 방법 ###
 - React 기반 실험 페이지 : npm start
 - MTurk : MTurk/*.html 실행
